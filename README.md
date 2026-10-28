@@ -6,3 +6,9 @@ As a passionate NBA fan and fan of the Indiana Pacers, I find it very tedious tr
 This workflow involves a cron job at the center of the automation, a python script parsing the data, and a bash script that is taking in the formatted data and outputting it to a report.txt file on the user's computer. The workflow starts with the cron job running automatically at 8:00AM in the morning every day of the week. This triggers the bash script that will output the formatted scoreboard from last night. In order to get there, we go up to the python script that actually parses the data. The python script utilizes the free, public, and open-source nba_api API in order to scrape data about last night's scoreboard and parse it / format it into a pandas DataFrame readable by a fan. After getting this pandas DataFrame, we need to convert it into a parse_data.csv file that is fed to the bash script to be read. Once the bash script receives this data store, it works to output the scoreboard data to a report.txt file, showing the user at the same time every morning the scoreboard from last night's NBA action.
 
 ![System diagram](design-doc/System-Diagram.png)
+
+## Tech Stack
+
+- **Languages:** Bash and Python
+- **Libraries:** Cron and pandas
+- **External tools:** free, public, and open-source API nba_api
