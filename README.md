@@ -12,3 +12,17 @@ This workflow involves a cron job at the center of the automation, a python scri
 - **Languages:** Bash and Python
 - **Libraries:** Cron and pandas
 - **External tools:** free, public, and open-source API nba_api
+
+## Setup
+COMING SOON
+
+## Usage
+COMING SOON
+
+## Roadmap
+- [ ] Scrape Data from the Conference Standings for both East and West
+- [ ] Scrape Data from the League Leaders in Major Statistical Categories (PTS, REB, AST, etc.)
+- [ ] Scrape Data for a Specific Player's Career or Seasonal Totals Across Major Statistical Categories
+
+## Author
+Patrick Buckley (github.com/PurduePanda)
