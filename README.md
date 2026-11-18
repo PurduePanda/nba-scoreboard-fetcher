@@ -14,7 +14,33 @@ This workflow involves a cron job at the center of the automation, a python scri
 - **External tools:** free, public, and open-source API nba_api
 
 ## Setup
-COMING SOON
+**Note:** You will need Git, Python 3, and Ubuntu (including WSL Ubuntu) for setup.
+Follow the steps below in order to install and prepare the NBA Scoreboard Fetcher on Ubuntu.
+1. In your terminal, clone the repository:
+   ```bash
+   git clone https://github.com/PurduePanda/nba-scoreboard-fetcher.git
+   ```
+2. After cloning, switch to the project root directory:
+   ```bash
+   cd nba-scoreboard-fetcher
+   ```
+3. From the repository root directory, run:
+   ```bash
+   python3 -m venv .venv
+   ```
+4. On Ubuntu, run:
+    ```bash
+    source .venv/bin/activate
+    ```
+5. To install dependencies, run:
+    ```bash
+    python -m pip install nba_api
+    ```
+**NOTE:** If Ubuntu reports that the `venv` module is unavailable,
+install it using:
+```bash
+sudo apt install python3-venv
+```
 
 ## Usage
 COMING SOON
