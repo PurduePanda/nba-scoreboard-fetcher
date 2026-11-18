@@ -43,7 +43,34 @@ sudo apt install python3-venv
 ```
 
 ## Usage
-COMING SOON
+
+### Manual Execution
+From the project root directory, run:
+
+```bash
+bash scores.sh
+```
+After running the script, open `report.txt` in the root directory of your project to view the NBA Scoreboard from yesterday. The report shows you the scoreboard for each game with team names, final scores, and each team's record (Wins-Losses) on the season. To view the `report.txt` file from Ubuntu, you can run:
+```bash
+cat report.txt
+```
+
+### Automated Execution
+**NOTE:** Your computer must be powered on and the WSL and the cron service must be running at the scheduled time (8:00AM) in order for the automated execution to work. Make sure to check your time zone using ```timedatectl``` in your terminal to check what configured time zone you are using. The command for the daily schedule in step 3 uses ```0 8 * * *``` which runs at 8:00AM according to the cron service's configured time zone. Ensure you configure cron service for the appropriate time zone of your choosing.
+1. Run ```pwd``` from your repository root to find the absolute path of the project.
+2. Open the cron editor using the command:
+   ```bash
+   crontab -e
+   ```
+3. Add the daily schedule using the absolute project path to `scores.sh` by doing:
+   ```bash
+   0 8 * * * /bin/bash {absolute_project_path}/scores.sh
+   ```
+4. Save and verify the configuration using ```crontab -l```
+
+**NOTE:** You must replace {absolute_project_path} with your actual directory for the project root directory in order to correctly add the daily schedule.
+
+
 
 ## Roadmap
 - [ ] Scrape Data from the Conference Standings for both East and West
